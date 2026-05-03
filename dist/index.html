@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <title>My PortFolio</title>
+
+    <link href="output.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Navbar-->
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-white/5 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+
+            <!-- LOGO -->
+            <a href="#" class="flex items-center">
+                <img src="/src/assets/logo.png" alt="logo" class="h-[3.5rem] w-auto mix-blend-screen" />
+            </a>
+
+            <!-- NAV CENTER -->
+            <nav class="md:flex flex items-center gap-10 text-gray-300 text-base">
+                <a href="#about" class="hover:text-[#a3e635] transition-all hover:-translate-y-0.5">ABOUT ME</a>
+                <a href="#skills" class="hover:text-[#a3e635] transition-all hover:-translate-y-0.5">SKILLS</a>
+                <a href="#projects" class="hover:text-[#a3e635] transition-all hover:-translate-y-0.5">PROJECTS</a>
+            </nav>
+
+            <!-- CONTACT BUTTON -->
+            <a href="#contact">
+                <button
+                    class="flex items-center text-white gap-2 border border-white/30 px-4 py-2 rounded-full text-sm hover:bg-white/10 transition">
+                    CONTACT
+                    <span class="bg-lime-300 text-black w-5 h-5 flex items-center justify-center rounded-full text-xs">
+                        ↗
+                    </span>
+                </button>
+            </a>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="min-h-screen bg-[#0b1220] flex flex-col items-center justify-center text-center px-6 pt-20 relative overflow-hidden">
+
+        <!-- Glow -->
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#a3e635]/5 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <!-- Badge -->
+        <div
+            class="flex items-center gap-2 border border-[#a3e635]/30 rounded-full px-4 py-1.5 text-[#a3e635] text-xs tracking-widest uppercase mb-7">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#a3e635] animate-pulse"></span>
+            Open to Opportunities
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-black text-5xl md:text-6xl text-white tracking-tight leading-tight mb-2"
+            style="font-family:'Syne',sans-serif;">
+            Hi, I'm <span class="text-[#a3e635]">Ashish</span>
+        </h1>
+
+        <!-- Role -->
+        <div class="text-3xl md:text-4xl font-bold text-white bg-white/5 rounded-xl px-6 py-2 inline-block mb-6"
+            style="font-family:'Syne',sans-serif;">
+            Developer
+        </div>
+
+        <!-- Description -->
+        <p class="text-white text-base font-light max-w-lg leading-relaxed mb-9">
+            Passionate about building clean, functional web experiences and exploring the world of AI & Machine Learning
+            — one project at a time.
+        </p>
+
+        <!-- Skill Cards -->
+        <div class="flex gap-4 flex-wrap justify-center mb-9">
+            <div class="bg-white/[0.04] border border-white/[0.08] rounded-xl px-5 py-3 text-left">
+                <div class="text-[10px] text-white tracking-widest uppercase mb-1">Web Skills</div>
+                <div class="text-sm text-white">
+                    <span class="text-[#a3e635]">HTML</span> · <span class="text-[#a3e635]">CSS</span> · <span
+                        class="text-[#a3e635]">JS</span>
+                </div>
+            </div>
+            <div class="bg-white/[0.04] border border-white/[0.08] rounded-xl px-5 py-3 text-left">
+                <div class="text-[10px] text-white tracking-widest uppercase mb-1">Currently Learning</div>
+                <div class="text-sm text-white">
+                    <span class="text-[#a3e635]">Python</span> · <span class="text-[#a3e635]">AI / ML</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex gap-3 flex-wrap justify-center">
+            <a href="#projects"
+                class="flex items-center gap-2 bg-[#a3e635] text-[#0d1117] font-bold text-sm px-7 py-3 rounded-full hover:opacity-85 transition-opacity"
+                style="font-family:'Syne',sans-serif;">
+                My Projects
+                <span
+                    class="w-6 h-6 bg-[#0d1117] rounded-full flex items-center justify-center text-white text-xs">↗</span>
+            </a>
+
+            <a href="#"
+                class="border border-white/20 text-gray-400 font-bold text-sm px-7 py-3 rounded-full hover:border-[#a3e635] hover:text-[#a3e635] transition-all hover:-translate-y-0.5">
+                Download CV
+            </a>
+        </div>
+
+    </section>
+
+    <!--About Section-->
+    <section id="about"
+        class="py-24 px-6 text-white bg-gradient-to-b from-[#0b1220] to-[#0e1a2f] relative overflow-hidden">
+
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+
+            <!-- top label -->
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1 border border-lime-400/30 rounded-full text-lime-400 text-xs mb-6">
+                <span class="w-2 h-2 bg-lime-400 rounded-full"></span>
+                ABOUT ME
+            </div>
+
+            <!-- heading -->
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                About <span class="text-lime-400">Me</span>
+            </h2>
+
+            <!-- description -->
+            <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+                I’m a passionate web developer focused on building clean, responsive, and user-friendly websites. As a
+                fresher, I’m actively improving my skills through real-world projects and hands-on practice. I work with
+                HTML, CSS, JavaScript, and Tailwind CSS, and I’m currently exploring the basics of AI and Machine
+                Learning to expand my technical knowledge.
+            </p>
+
+            <!-- cards -->
+            <div class="grid md:grid-cols-3 gap-6 mt-14 reveal">
+
+                <!-- card 1 -->
+                <div
+                    class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-lime-400/30 transition group">
+
+                    <div
+                        class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-lime-400/10 text-lime-400 mb-5 text-xl">
+                        💡
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-lime-400 mb-2">
+                        Mindset
+                    </h3>
+
+                    <p class="text-gray-400 text-sm">
+                        Focused on learning, consistency, and building real skills step by step.
+                    </p>
+
+                    <div class="w-10 h-[2px] bg-lime-400 mx-auto mt-4 opacity-70"></div>
+
+                </div>
+
+                <!-- card 2 -->
+                <div
+                    class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-lime-400/30 transition group">
+
+                    <div
+                        class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-lime-400/10 text-lime-400 mb-5 text-xl">
+                        &lt;/&gt;
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-lime-400 mb-2">
+                        Skills
+                    </h3>
+
+                    <p class="text-gray-400 text-sm">
+                        HTML, CSS, JavaScript, Tailwind CSS, Node.js, and basic MongoDB.
+                    </p>
+
+                    <div class="w-10 h-[2px] bg-lime-400 mx-auto mt-4 opacity-70"></div>
+
+                </div>
+
+                <!-- card 3 -->
+                <div
+                    class="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-lime-400/30 transition group">
+
+                    <div
+                        class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-lime-400/10 text-lime-400 mb-5 text-xl">
+                        🚀
+                    </div>
+
+                    <h3 class="text-lg font-semibold text-lime-400 mb-2">
+                        Goal
+                    </h3>
+
+                    <p class="text-gray-400 text-sm">
+                        To become a skilled full-stack developer and build impactful projects.
+                    </p>
+
+                    <div class="w-10 h-[2px] bg-lime-400 mx-auto mt-4 opacity-70"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--skills section-->
+
+    <section id="skills" class="py-20 px-6 bg-[#0b1220] text-white relative overflow-hidden">
+
+        <!-- background dots -->
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(rgba(163,230,53,0.15) 1px, transparent 1px); background-size: 22px 22px;">
+        </div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+
+            <!-- label -->
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1 border border-lime-400/30 rounded-full text-lime-400 text-xs mb-6">
+                <span class="w-2 h-2 bg-lime-400 rounded-full"></span>
+                MY SKILLS
+            </div>
+
+            <!-- heading -->
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                My <span class="text-lime-400">Skills</span>
+            </h2>
+
+            <p class="text-gray-400 mb-14 text-sm md:text-base max-w-xl mx-auto">
+                Technologies and tools I use to build clean, responsive and user-friendly websites.
+            </p>
+
+            <!-- ================= FRONTEND ================= -->
+            <div class="text-left mb-10 reveal">
+                <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-lime-400 rounded-full"></span> Frontend
+                </h3>
+
+                <div class="flex justify-center">
+                    <div class="flex flex-wrap justify-center gap-11 max-w-3xl text-center">
+
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                class="h-12 mx-auto mb-2" />
+                            <p class="text-sm text-gray-300">HTML</p>
+                        </div>
+
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                class="h-12 mx-auto mb-2" />
+                            <p class="text-sm text-gray-300">CSS</p>
+                        </div>
+
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                class="h-12 mx-auto mb-2" />
+                            <p class="text-sm text-gray-300">JavaScript</p>
+                        </div>
+
+                        <div>
+                            <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+                                class="h-12 mx-auto mb-2" />
+                            <p class="text-sm text-gray-300">Tailwind CSS</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-white/10 my-10">
+
+            <!-- ================= TOOLS ================= -->
+            <div class="text-left mb-10 reveal">
+                <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-lime-400 rounded-full"></span> Tools
+                </h3>
+
+                <div class="flex justify-center">
+                    <div class="flex flex-wrap justify-center gap-11 max-w-2xl text-center">
+
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                class="h-12 mx-auto mb-2" />
+                            <p class="text-sm text-gray-300">Git</p>
+                        </div>
+
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                class="h-12 mx-auto mb-2 bg-white rounded-full p-1" />
+                            <p class="text-sm text-gray-300">GitHub</p>
+                        </div>
+
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                class="h-12 mx-auto mb-2" />
+                            <p class="text-sm text-gray-300">VS Code</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-white/10 my-10">
+
+            <!-- ================= LEARNING ================= -->
+            <div class="text-left reveal">
+                <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-lime-400 rounded-full"></span> Currently Learning
+                </h3>
+
+                <div class="flex justify-center">
+                    <div class="flex flex-wrap justify-center gap-11 max-w-xl text-center">
+
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+                                class="h-12 mx-auto mb-2" />
+                            <p class="text-sm text-gray-300">AI / ML Basics</p>
+                        </div>
+
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                class="h-12 mx-auto mb-2" />
+                            <p class="text-sm text-gray-300">Advanced Python</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--project-->
+
+    <section id="projects" class="py-20 px-6 bg-gradient-to-b from-[#0e1a2f] to-[#0a1628] text-white">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <!-- label -->
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1 border border-lime-400/30 rounded-full text-lime-400 text-xs mb-6">
+                <span class="w-2 h-2 bg-lime-400 rounded-full"></span>
+                PROJECTS
+            </div>
+
+            <!-- heading -->
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                My <span class="text-lime-400">Projects</span>
+            </h2>
+
+            <p class="text-gray-400 mb-14 text-sm md:text-base max-w-xl mx-auto">
+                Some projects I’ve built while learning and improving my development skills.
+            </p>
+
+            <!-- PROJECT GRID -->
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+
+                <!-- PROJECT 1 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-lime-400/30 transition">
+
+                    <h3 class="text-xl font-semibold mb-2">
+                        Quiz Web App
+                    </h3>
+
+                    <p class="text-gray-400 text-sm mb-4">
+                        A full-featured quiz platform with login/signup, category selection and leaderboard.
+                    </p>
+
+                    <!-- tech -->
+                    <div class="flex flex-wrap gap-2 mb-4 text-xs text-gray-300">
+                        <span class="px-3 py-1 bg-white/10 rounded-full">HTML</span>
+                        <span class="px-3 py-1 bg-white/10 rounded-full">CSS</span>
+                        <span class="px-3 py-1 bg-white/10 rounded-full">JavaScript</span>
+                        <span class="px-3 py-1 bg-white/10 rounded-full">Node.js</span>
+                        <span class="px-3 py-1 bg-white/10 rounded-full">MongoDB</span>
+                    </div>
+
+                    <!-- buttons -->
+                    <div class="flex gap-4 text-sm">
+                        <a href="#" class="text-lime-400 hover:underline">Live Demo ↗</a>
+                        <a href="#" class="text-gray-300 hover:text-white">GitHub</a>
+                    </div>
+
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-lime-400/30 transition">
+
+                    <h3 class="text-xl font-semibold mb-2">
+                        Portfolio Website
+                    </h3>
+
+                    <p class="text-gray-400 text-sm mb-4">
+                        A personal portfolio to showcase my skills, projects and learning journey.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4 text-xs text-gray-300">
+                        <span class="px-3 py-1 bg-white/10 rounded-full">HTML</span>
+                        <span class="px-3 py-1 bg-white/10 rounded-full">Tailwind</span>
+                        <span class="px-3 py-1 bg-white/10 rounded-full">JavaScript</span>
+                    </div>
+
+                    <div class="flex gap-4 text-sm">
+                        <a href="#" class="text-lime-400 hover:underline">Live Demo ↗</a>
+                        <a href="#" class="text-gray-300 hover:text-white">GitHub</a>
+                    </div>
+
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-lime-400/30 transition">
+
+                    <h3 class="text-xl font-semibold mb-2">
+                        AI Learning Mini Project
+                    </h3>
+
+                    <p class="text-gray-400 text-sm mb-4">
+                        Basic AI/ML project using Python to understand core concepts and models.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4 text-xs text-gray-300">
+                        <span class="px-3 py-1 bg-white/10 rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-white/10 rounded-full">AI / ML</span>
+                    </div>
+
+                    <div class="flex gap-4 text-sm">
+                        <a href="#" class="text-lime-400 hover:underline">View Project</a>
+                        <a href="#" class="text-gray-300 hover:text-white">GitHub</a>
+                    </div>
+
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-lime-400/30 transition">
+
+                    <h3 class="text-xl font-semibold mb-2">
+                        Landing Page UI
+                    </h3>
+
+                    <p class="text-gray-400 text-sm mb-4">
+                        Clean and responsive landing page design built using Tailwind CSS.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4 text-xs text-gray-300">
+                        <span class="px-3 py-1 bg-white/10 rounded-full">HTML</span>
+                        <span class="px-3 py-1 bg-white/10 rounded-full">Tailwind</span>
+                    </div>
+
+                    <div class="flex gap-4 text-sm">
+                        <a href="#" class="text-lime-400 hover:underline">Live Demo ↗</a>
+                        <a href="#" class="text-gray-300 hover:text-white">GitHub</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--contact section-->
+
+    <section id="contact" class="py-24 px-6 bg-[#0b1220] text-white relative overflow-hidden">
+
+        <!-- subtle background dots -->
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(rgba(163,230,53,0.15) 1px, transparent 1px); background-size: 22px 22px;">
+        </div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+
+            <!-- heading -->
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1 border border-lime-400/30 rounded-full text-lime-400 text-xs mb-4">
+                    <span class="w-2 h-2 bg-lime-400 rounded-full"></span>
+                    GET IN TOUCH
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Let’s <span class="text-lime-400">Work Together</span>
+                </h2>
+
+                <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">
+                    I’m open to internship and junior developer opportunities. Feel free to reach out.
+                </p>
+            </div>
+
+            <!-- grid -->
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <!-- LEFT SIDE -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md">
+
+                    <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+
+                    <p class="text-gray-400 text-sm mb-8">
+                        I’m always interested in new opportunities and learning experiences.
+                        If you have any question or opportunity, feel free to contact me.
+                    </p>
+
+                    <div class="space-y-6">
+
+                        <!-- Location -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-lime-400/10 flex items-center justify-center text-lime-400">
+                                📍
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Location</p>
+                                <p class="text-gray-400 text-sm">India</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-lime-400/10 flex items-center justify-center text-lime-400">
+                                ✉️
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Email</p>
+                                <p class="text-gray-400 text-sm">your-email@example.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-lime-400/10 flex items-center justify-center text-lime-400">
+                                ⏱️
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Response Time</p>
+                                <p class="text-gray-400 text-sm">Within 24 hours</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE FORM -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md">
+                    <form id="contact-form" class="space-y-5">
+
+                        <!-- Name -->
+                        <div class="relative">
+                            <input type="text" name="name" placeholder="Your Name" required
+                                class="w-full px-4 py-3 pl-10 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-lime-400 text-white" />
+                            <span class="absolute left-3 top-3 text-gray-400">👤</span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="relative">
+                            <input type="email" name="email" placeholder="Your Email" required
+                                class="w-full px-4 py-3 pl-10 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-lime-400 text-white" />
+                            <span class="absolute left-3 top-3 text-gray-400">✉️</span>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="relative">
+                            <textarea name="message" rows="5" placeholder="Your Message" required
+                                class="w-full px-4 py-3 pl-10 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-lime-400 text-white"></textarea>
+                            <span class="absolute left-3 top-3 text-gray-400">📝</span>
+                        </div>
+
+                        <!-- Button -->
+                        <button type="submit" id="send-btn"
+                            class="w-full bg-lime-400 text-black py-3 rounded-lg font-semibold hover:opacity-90 transition flex items-center justify-center gap-2">
+                            Send Message ✈
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast -->
+    <div id="toast" style="
+  position:fixed; bottom:2rem; left:50%; transform:translateX(-50%) translateY(20px);
+  background:#a3e635; color:#0d1117;
+  padding:12px 28px; border-radius:100px;
+  font-weight:700; font-size:0.85rem;
+  box-shadow:0 0 30px rgba(163,230,53,0.3);
+  z-index:9999; opacity:0;
+  transition:opacity 0.3s, transform 0.3s;
+">
+        ✅ Message sent! I'll get back to you soon.
+    </div>
+
+    <!--footer-->
+
+    <footer class="bg-gradient-to-b from-[#0e1a2f] to-[#0a1628] text-gray-400 py-10 px-6">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <!-- Social Icons -->
+            <div class="flex justify-center gap-6 mb-6 text-lg">
+
+                <a href="#" class="hover:text-lime-400 transition">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" class="hover:text-lime-400 transition">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="#" class="hover:text-lime-400 transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+                <a href="#" class="hover:text-lime-400 transition">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="#" class="hover:text-lime-400 transition">
+                    <i class="fas fa-phone"></i>
+                </a>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-white/10 my-6"></div>
+
+            <!-- Copyright -->
+            <p class="text-sm">
+                © 2026 <span class="text-white">Ashish</span>. All rights reserved.
+            </p>
+
+            <!-- Credit -->
+            <p class="text-xs mt-2">
+                Built by <span class="text-lime-400">Ashish</span>
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="../src/js/script.js"></script>
+
+
+</body>
+
+</html>
