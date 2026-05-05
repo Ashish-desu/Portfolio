@@ -1,4 +1,50 @@
-  // =====================
+// =====================
+// RESPONSIVE NAVBAR
+// =====================
+let menuOpen = false;
+
+function handleResize() {
+  const isMobile = window.innerWidth < 768;
+  document.getElementById("desktop-nav").style.display     = isMobile ? "none" : "flex";
+  document.getElementById("desktop-contact").style.display = isMobile ? "none" : "flex";
+  document.getElementById("menu-btn").style.display        = isMobile ? "flex" : "none";
+  if (!isMobile) {
+    document.getElementById("mobile-menu").style.display = "none";
+    menuOpen = false;
+    resetBars();
+  }
+}
+
+function toggleMenu() {
+  menuOpen = !menuOpen;
+  document.getElementById("mobile-menu").style.display = menuOpen ? "flex" : "none";
+  if (menuOpen) {
+    document.getElementById("bar1").style.transform = "translateY(7px) rotate(45deg)";
+    document.getElementById("bar2").style.opacity = "0";
+    document.getElementById("bar3").style.transform = "translateY(-7px) rotate(-45deg)";
+  } else {
+    resetBars();
+  }
+}
+
+function closeMenu() {
+  menuOpen = false;
+  document.getElementById("mobile-menu").style.display = "none";
+  resetBars();
+}
+
+function resetBars() {
+  document.getElementById("bar1").style.transform = "none";
+  document.getElementById("bar2").style.opacity = "1";
+  document.getElementById("bar3").style.transform = "none";
+}
+
+// Run on load and on resize
+handleResize();
+window.addEventListener("resize", handleResize);
+
+
+// =====================
   // 1. TYPING EFFECT
   // =====================
   const roles = ["Web Developer", "Python Learner", "AI/ML Enthusiast", "Fresher Dev"];
@@ -213,3 +259,12 @@
         showToast("Something went wrong. Please try again.", false);
       });
   });
+
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("mobile-menu");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
+  
